@@ -1,0 +1,2 @@
+JAVA_OPTS='-Djava.security.egd=file:/dev/./urandom -server -Xms256m -Xmx3000m -XX:PermSize=128m -XX:MaxNewSize=256m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8'
+CATALINA_OPTS="-Djava.library.path=/usr/local/apr/lib"
