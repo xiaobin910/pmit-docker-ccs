@@ -7,7 +7,7 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV JAVA_HOME /docker-java-home
 
 # 设置时区
-ENV TZ=Asia/Shanghai
+ENV TZ Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 拷贝配置文件
