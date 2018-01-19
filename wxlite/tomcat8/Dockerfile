@@ -1,14 +1,19 @@
 FROM tomcat:latest
 
-MAINTAINER "Lin Chen <chenlin@pmit.cn>"
+MAINTAINER "Chen Lin <chenlin@pmit.cn>"
 
+# 初始环境变量
 ENV CATALINA_HOME /usr/local/tomcat
 ENV JAVA_HOME /docker-java-home
 
-RUN mkdir -p $JAVA_HOME/ssl
+# 设置时区
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+# 拷贝配置文件
 COPY bin/* $CATALINA_HOME/bin/
 COPY conf/* $CATALINA_HOME/conf/
+RUN mkdir -p $JAVA_HOME/ssl
 COPY ssl/* $JAVA_HOME/ssl/
 COPY jre/lib/security/* $JAVA_HOME/jre/lib/security/
 
