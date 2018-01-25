@@ -20,7 +20,7 @@ COPY jre/lib/security/* $JAVA_HOME/jre/lib/security/
 # JRE导入SSL证书
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias wxwap.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/wxwap.pmit.cn.cer
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias img.wx.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/img.wx.pmit.cn.cer
-RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias boss.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/boss.pmit.cn.cer
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias boapi.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/boapi.pmit.cn.cer
+RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias weapp.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/weapp.pmit.cn.cer
 
 CMD ["catalina.sh", "run"]
