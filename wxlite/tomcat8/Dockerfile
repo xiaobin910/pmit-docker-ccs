@@ -22,5 +22,6 @@ RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias wxwap.pmit.cn -keystore 
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias img.wx.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/img.wx.pmit.cn.cer
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias boapi.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/boapi.pmit.cn.cer
 RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias weapp.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/weapp.pmit.cn.cer
+RUN $JAVA_HOME/bin/keytool -importcert -noprompt -alias cos.pmit.cn -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file $JAVA_HOME/ssl/cos.pmit.cn.cer
 
 CMD ["catalina.sh", "run"]
