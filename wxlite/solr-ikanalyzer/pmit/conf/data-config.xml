@@ -1,0 +1,39 @@
+ <dataConfig>
+    <!-- 数据源配置 -->
+    <datasource type="jdbcdatasource" driver="com.mysql.jdbc.driver" url="jdbc:mysql://192.168.1.68:3306/wxlite" user="pmitcn" password="pmit16888" />
+	 <document>
+        <!-- name属性，就代表着一个文档，可以随便命名 -->
+        <!-- query是一条sql，代表在数据库查找出来的数据 -->
+        <entity name="product" query="select id, names, num, pprice, oprice, instruction, browse_cnt, IFNULL(main_url, url1) main_url, classify_names1, classify_names2, classify_names3, classify_id1, classify_id2, classify_id3, product_group_id, sku_name, sku_value, sku_value_all, brand_name, shop_name, shop_id, search_keywords, ecid, order_no, evaluate_total, already_buy_count, IFNULL((browse_cnt + evaluate_total + already_buy_count),0) as all_cnt, created_on from shopn_product where show_state = 1 and deleted = 0 and state = 1">
+        <!-- 每一个field映射着数据库中列与文档中的域，column是数据库列，name是solr的域(必须是在managed-schema文件中配置过的域才行) -->
+        <field column="id" name="id"/>
+        <field column="names" name="product_name"/>
+        <field column="num" name="product_num"/>
+        <field column="pprice" name="product_pprice"/>
+        <field column="oprice" name="product_oprice"/>
+        <field column="instruction" name="product_instruction"/>
+        <field column="browse_cnt" name="product_browse_cnt"/>
+		<field column="main_url" name="product_main_url"/>
+		<field column="classify_names1" name="product_classify_names1"/>
+		<field column="classify_names2" name="product_classify_names2"/>
+		<field column="classify_names3" name="product_classify_names3"/>
+		<field column="classify_id1" name="product_classify_id1"/>
+		<field column="classify_id2" name="product_classify_id2"/>
+		<field column="classify_id3" name="product_classify_id3"/>
+		<field column="product_group_id" name="product_group_id"/>
+		<field column="sku_name" name="product_sku_name"/>
+		<field column="sku_value" name="product_sku_value"/>
+		<field column="sku_value_all" name="product_sku_value_all"/>
+		<field column="brand_name" name="product_brand_name"/>
+		<field column="shop_name" name="product_shop_name"/>
+		<field column="shop_id" name="product_shop_id"/>
+		<field column="search_keywords" name="product_search_keywords"/>
+		<field column="ecid" name="product_ecid"/>
+		<field column="order_no" name="product_order_no"/>
+		<field column="evaluate_total" name="product_evaluate_total"/>
+		<field column="already_buy_count" name="product_already_buy_count"/>
+		<field column="all_cnt" name="product_all_cnt"/>
+		<field column="created_on" name="product_created_on"/>
+        </entity>
+    </document>
+</dataConfig>
