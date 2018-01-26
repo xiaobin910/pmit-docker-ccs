@@ -1,6 +1,6 @@
  <dataConfig>
     <!-- 数据源配置 -->
-    <datasource type="jdbcdatasource" driver="com.mysql.jdbc.driver" url="jdbc:mysql://192.168.1.68:3306/wxlite" user="pmitcn" password="pmit16888" />
+    <datasource type="jdbcdatasource" driver="com.mysql.jdbc.driver" url="jdbc:mysql://10.0.0.16:3306/wxlite" user="pmitcn" password="jia168PM!^*" />
 	 <document>
         <!-- name属性，就代表着一个文档，可以随便命名 -->
         <!-- query是一条sql，代表在数据库查找出来的数据 -->
