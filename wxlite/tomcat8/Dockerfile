@@ -10,7 +10,7 @@ ENV JAVA_HOME /docker-java-home
 # ENV WAR_URI http://t.wxwap.pmit.cn:9999/common.zip
 # ENV WAR_URI http://t.wxwap.pmit.cn:9999/basic.zip
 # ENV WAR_URI http://t.wxwap.pmit.cn:9999/minisite.zip
-ENV WAR_URI http://t.wxwap.pmit.cn:9999/mall.zip
+ENV WAR_URI http://120.132.126.117:9999/mall.zip
 # ENV WAR_URI http://t.wxwap.pmit.cn:9999/boss.zip
 
 ENV WAR_ROOT /opt
